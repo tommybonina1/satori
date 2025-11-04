@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --background: 38 100% 94%;  /* #fff3df - Light cream */
+    --foreground: 174 19% 21%;  /* #2B3E3C - Deep teal */
+
+    --card: 82 20% 72%;  /* Lighter, more opaque sage green */
+    --card-foreground: 174 19% 21%;
+
+    --popover: 36 35% 92%;
+    --popover-foreground: 174 19% 21%;
+
+    --primary: 174 19% 21%;  /* Deep teal */
+    --primary-foreground: 36 35% 92%;  /* Cream text on teal */
+
+    --secondary: 174 15% 35%;  /* Lighter teal */
+    --secondary-foreground: 36 35% 92%;
+
+    --muted: 36 25% 85%;  /* Muted cream */
+    --muted-foreground: 174 19% 35%;
+
+    --accent: 174 25% 45%;  /* Accent teal */
+    --accent-foreground: 36 35% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 36 35% 92%;
+
+    --border: 36 25% 80%;
+    --input: 36 25% 85%;
+    --ring: 174 19% 21%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(36 35% 95%), hsl(36 35% 88%));
+    --card-shadow: 0 4px 20px -4px hsl(174 19% 21% / 0.08);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
